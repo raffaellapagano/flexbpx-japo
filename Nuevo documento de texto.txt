@@ -1,0 +1,34 @@
+- Exercici 4
+En aquesta part volem treballar la capçalera i el grafisme. Hauràs d'afegir icones i logotip, a més de fer una imatge de fons. 
+Substitueix els quadrants respectius perquè la nova capçalera tingui l'aspecte d'aquest web de turisme al japó:
+
+IMG.4
+
+Capçalera Flex amb grafisme
+
+És important que tinguis en consideració el següent:
+
+Les opcions cliclables han de tenir efecte roll-over.
+Els media query creats a l'activitat anterior, s'ha de mantenir.
+El text "Disfruta..." és semitransparent.
+El logo i el fons de la capçalera, els tens adjuntat a l'activitat. La resta d'elements gràfics els hauràs de cercar i que siguin 
+el més semblants possibles.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- Exercici 5
+En aquest exercici hauràs d'afegir l'apartat dels articles seguint aquest grafisme:
+
+IMG.4-5
+
+grafisme article de secció
+
+
+-Imatge completa per a exercicis 4 i 5
+
+
+Nivell 3
+- Exercici 6
+Et veus capaç de fer el mateix treball però amb grid layout?. Doncs l'objectiu d'aquest treball és que utilitzis les propietats de 
+grid layout per a fer tota l'estructura de la web i els seus diferents dispositius.
+
+Si vols pots consultar el material opcional de grid layout que hi ha al campus

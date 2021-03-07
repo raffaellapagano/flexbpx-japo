@@ -1,0 +1,118 @@
+* {
+    margin:0px;
+    padding: 10px;
+    box-sizing: border-box;  /*para que las cajas no desborden una con otrs*/
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    color: #696969;
+    text-decoration: none;
+    font-style: bold;
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+    
+    .header{
+        background: url(imagenes/cabecera.jpg);
+        background-position: center;
+        background-attachment: content;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+        }
+            .logo{
+                flex: 1 1 auto;
+            }
+            .nav{
+                flex: 5 1 auto;
+            }
+                .nav a{
+                    font-size: 14px;
+                    padding: 0, 10px;
+                    letter-spacing: 2px;
+                }
+                .nav a :hover{
+                    color: #e99592;
+                }
+            .social{
+                flex: 1 1 auto;
+                display: flex;
+            }
+                .social a{
+                    font-size: 18px;
+                    padding: 0, 5px;
+                }
+                .social a :hover{
+                    color: #e99592;
+                }
+        .texto-principal{
+            background: rgba(0,0,0,.1)
+        }    
+            h1{
+                background: #ffd460;
+            }
+    .section{
+        background: #000;
+        display: flex;
+    }
+        .articulos{
+            background: #4e4e6a;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article{
+                background: #1f6cb0;
+                flex: 1 1 40%;
+            }
+            .navegacion{
+                background: #70a3c4;
+                flex: 1 1 100%;
+            }
+        .aside{
+            background: #f73f52;
+            flex-flow: column nowrap;
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background: #ffeab5;
+            }
+    .footer{
+        background: #000;
+        display: flex;
+        justify-content: center;
+    }
+        .pie{
+            background: #e6af2e;
+            width: 300px;
+        }
+
+@media all and (max-width: 800px){
+    .section{
+            flex-direction: column;
+        }
+.aside{
+    display: flex;
+    justify-content: center;
+}
+}
+
+@media all and (max-width: 600px){
+
+En el ejercicio no cambia nada en esta versión, 
+pero yo creo que los artículos deberian estar en columnas.
+.articulos{
+    flex-direction: column;
+}
+}
+
