@@ -123,8 +123,18 @@ a{
                 padding: 0 0 10px 0;
             }
             .navegacion{
-                background: #70a3c4;
+                background: #a52a2a;
                 flex: 1 1 100%;
+                margin: 10px 10px 0 0;
+            }
+            .navegacion a{
+                color: #fff;
+                font-size: 11px;
+                padding: 0 10px;
+                letter-spacing: 2px;
+            }
+            .navegacion a:hover{
+                color:#e99592;
             }
         .aside{
             background: #f73f52;
@@ -143,13 +153,12 @@ a{
             padding: 10px;
         }
     .footer{
-        background: #000;
         display: flex;
         justify-content: center;
+        margin: 20px 0;
     }
         .pie{
-            background: #e6af2e;
-            width: 300px;
+            text-align: center;
         }
 
 @media all and (max-width: 800px){
