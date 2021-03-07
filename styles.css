@@ -53,7 +53,7 @@ a{
                     letter-spacing: 2px;
                 }
                 .nav a:hover{
-                    color: #e99592;
+                    color: #ee7159;
                 }
             .social{
                 flex: 1 1 auto;
@@ -67,7 +67,7 @@ a{
                     padding: 0, 5px;
                 }
                 .social a :hover{
-                    color: #e99592;
+                    color: #4caeeb;
                 }
         .texto-principal{
             background: rgba(0,0,0,.1);
@@ -76,16 +76,25 @@ a{
             justify-content: center;
             height: 100px;
             margin-bottom: 10px;
-        }    
-            h1{
-                color: #e99592;
+        }
+
+            blockquote{
+                color: #ee7159;
                 opacity: 80%;
                 background: rgab(0,0,0,.1);
                 font-family: 'Lora', serif;
                 font-size:30px;
                 font-weight: 300px;
                 text-align: center;
-                line-height: 1.6; /*espacio entrelinea*/            
+                line-height: 0.2; /*espacio entrelinea*/          
+            }
+            blockquote :before{
+                margin-left: -45px;
+            }
+            blockquote :before,
+            blockquote :after{
+                font-size: 100px;
+                position: absolute;
             }
     .section{
         margin: 10px 50px;
