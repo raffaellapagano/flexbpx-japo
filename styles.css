@@ -1,6 +1,6 @@
 * {
     margin:0px;
-    padding: 10px;
+    padding: 0px;
     box-sizing: border-box;  /*para que las cajas no desborden una con otrs*/
 }
 body{
@@ -15,6 +15,9 @@ a{
     display: flex;
     flex-flow: column nowrap;
 }
+.margen-interno{
+    padding: 0 50px;
+}
     
     .header{
         background: url(imagenes/cabecera.jpg);
@@ -23,10 +26,10 @@ a{
         background-size: cover;
         display: flex;
         flex-flow: column nowrap;
-        padding: 40px;
         height: 260px;
     }
         .menu{
+            border: 1px solid black;
             display: flex;
             flex-flow: row nowrap;
             height: 100px;
@@ -100,7 +103,7 @@ a{
             h3{
                 color: #fff;
                 font-size: 13px;
-                padding 10px 0;
+                padding: 10px 0;
                 margin-top: -80px;
             }
             h2{
