@@ -88,6 +88,8 @@ a{
                 line-height: 1.6; /*espacio entrelinea*/            
             }
     .section{
+        margin: 10px 50px;
+        padding: 5px;
         background: #d7d7d7;
         display: flex;
     }
@@ -98,6 +100,7 @@ a{
             flex-flow: row wrap;
         }
             .article{
+                padding: 5px;
                 flex: 1 1 40%;
                 font-size: 13px;
                 letter-spacing: 1px;
@@ -145,7 +148,7 @@ a{
                 color:#e99592;
             }
         .aside{
-            background: #f73f52;
+            background: #d7d7d7;
             flex-flow: column nowrap;
             flex: 1 1 auto;
             margin: 10px 5px 10px 0;
@@ -154,12 +157,8 @@ a{
             width: 100%;
         }
             .publicidad{
-                background: #ffeab5;
+                padding: 5px;
             }
-        h4{
-            color: #fff;
-            padding: 10px;
-        }
     .footer{
         display: flex;
         justify-content: center;
