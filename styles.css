@@ -9,7 +9,6 @@ body{
 a{
     color: #696969;
     text-decoration: none;
-    font-style: bold;
 }
 .padre{
     display: flex;
@@ -49,7 +48,7 @@ a{
                     padding: 0, 10px;
                     letter-spacing: 2px;
                 }
-                .nav a :hover{
+                .nav a:hover{
                     color: #e99592;
                 }
             .social{
@@ -81,12 +80,12 @@ a{
                 line-height: 1.6; /*espacio entrelinea*/            
             }
     .section{
-        background: #000;
+        background: #fff;
         display: flex;
     }
         .articulos{
             background: #d7d7d7;
-            flex: 2 1 auto;
+            flex: 2 1 100%; /*he modificado en lugar de poner auto, he puesto 100%*/
             display: flex;
             flex-flow: row wrap;
         }
@@ -99,6 +98,17 @@ a{
             }
             .article img{
                 width: 100%;
+            }
+            .article a{
+                padding: 10px 0px;
+                margin: 10px 0;
+                display: inline-block;
+            }
+            .article a:hover{
+                color: #e99592;
+                padding: 10px 0px;
+                margin: 10px 0;
+                display: inline-block;
             }
             h3{
                 color: #fff;
@@ -120,10 +130,18 @@ a{
             background: #f73f52;
             flex-flow: column nowrap;
             flex: 1 1 auto;
+            margin: 10px 5px 10px 0;
+        }
+        .aside img{
+            width: 100%;
         }
             .publicidad{
                 background: #ffeab5;
             }
+        h4{
+            color: #fff;
+            padding: 10px;
+        }
     .footer{
         background: #000;
         display: flex;
