@@ -33,6 +33,9 @@ a{
             .logo{
                 flex: 1 1 auto;
             }
+            .logo img{
+                flex: 1 1 auto;
+            }
             .nav{
                 flex: 5 1 auto;
             }
