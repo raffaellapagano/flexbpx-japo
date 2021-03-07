@@ -4,6 +4,7 @@
     box-sizing: border-box;  /*para que las cajas no desborden una con otrs*/
 }
 body{
+    background: #ffffe0;
     font-family: 'Montserrat', sans-serif;
 }
 a{
@@ -15,17 +16,11 @@ a{
     flex-flow: column nowrap;
 }
 .margen-interno{
-    margin-top: 10px;
-    padding: 0 50px;
+    /*////////////////////////////////////////////*/
 }
     
     .header{
-        margin: 0 50px;
-        padding: 0 30px;
-        background: url(imagenes/cabecera.jpg);
-        background-position: center;
-        background-attachment: content;
-        background-size: cover;
+        margin: 0 20px;
         display: flex;
         flex-flow: column nowrap;
         height: 250px;
@@ -33,9 +28,8 @@ a{
         .menu{
             display: flex;
             flex-flow: row nowrap;
-            height: 100px;
+            height: 60px;
             align-items: center;
-            margin-bottom: 30px;
         }
             .logo{
                 flex: 1 1 auto;
@@ -58,34 +52,39 @@ a{
             .social{
                 flex: 1 1 auto;
                 display: flex;
-                flex-flow: column nowrap;
+                flex-flow: row nowrap;
                 justify-content: space-around;
                 height: 100%;
+                align-items:center;
+                padding: 0 15px 15px 0;
             }
                 .social a{
-                    font-size: 18px;
-                    padding: 0, 5px;
+                    font-size: 12px;
+                    padding-left: 30px;
                 }
                 .social a :hover{
                     color: #e99592;
                 }
         .texto-principal{
-            background: rgba(0,0,0,.1);
+            background: url(imagenes/cabecera1800px.jpg);
+            background-position:50% 65%;
+            background-repeat: no-repeat;
+            background-attachment: content;
+            background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100px;
-            margin-bottom: 10px;
+            height: 200px;
         }    
             h1{
                 color: #e99592;
                 opacity: 80%;
                 background: rgab(0,0,0,.1);
-                font-family: 'Lora', serif;
-                font-size:30px;
+                font-family: 'Montserrat', serif;
+                font-size:8px;
                 font-weight: 300px;
                 text-align: center;
-                line-height: 1.6; /*espacio entrelinea*/            
+                line-height: 1; /*espacio entrelinea*/           
             }
     .section{
         margin: 10px 50px;
