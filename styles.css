@@ -4,6 +4,7 @@
     box-sizing: border-box;  /*para que las cajas no desborden una con otrs*/
 }
 body{
+    background: #ffffe0;
     font-family: 'Montserrat', sans-serif;
 }
 a{
@@ -13,19 +14,9 @@ a{
 .padre{
     display: flex;
     flex-flow: column nowrap;
-}
-.margen-interno{
-    margin-top: 10px;
-    padding: 0 50px;
-}
-    
+}    
     .header{
-        margin: 0 50px;
-        padding: 0 30px;
-        background: url(imagenes/cabecera.jpg);
-        background-position: center;
-        background-attachment: content;
-        background-size: cover;
+        margin: 0 20px;
         display: flex;
         flex-flow: column nowrap;
         height: 250px;
@@ -33,9 +24,8 @@ a{
         .menu{
             display: flex;
             flex-flow: row nowrap;
-            height: 100px;
+            height: 60px;
             align-items: center;
-            margin-bottom: 30px;
         }
             .logo{
                 flex: 1 1 auto;
@@ -58,106 +48,114 @@ a{
             .social{
                 flex: 1 1 auto;
                 display: flex;
-                flex-flow: column nowrap;
+                flex-flow: row nowrap;
                 justify-content: space-around;
                 height: 100%;
+                align-items:center;
+                padding: 0 15px 15px 0;
             }
                 .social a{
-                    font-size: 18px;
-                    padding: 0, 5px;
+                    font-size: 12px;
+                    padding-left: 30px;
                 }
                 .social a :hover{
                     color: #e99592;
                 }
         .texto-principal{
-            background: rgba(0,0,0,.1);
+            background: url(imagenes/cabecera1800px.jpg);
+            background-position:50% 65%;
+            background-repeat: no-repeat;
+            background-attachment: content;
+            background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100px;
-            margin-bottom: 10px;
+            height: 200px;
         }    
             h1{
                 color: #e99592;
                 opacity: 80%;
                 background: rgab(0,0,0,.1);
-                font-family: 'Lora', serif;
-                font-size:30px;
+                font-family: 'Montserrat', serif;
+                font-size:8px;
                 font-weight: 300px;
                 text-align: center;
-                line-height: 1.6; /*espacio entrelinea*/            
+                line-height: 1; /*espacio entrelinea*/           
             }
     .section{
-        margin: 10px 50px;
+        margin: 10px 30px;
         padding: 5px;
-        background: #d7d7d7;
+        background: #e6e6e6;
         display: flex;
+        flex-flow: row nowrap;
     }
         .articulos{
-            background: #d7d7d7;
-            flex: 2 1 100%; /*he modificado en lugar de poner auto, he puesto 100%*/
+            flex: 1 1 75%; 
             display: flex;
             flex-flow: row wrap;
         }
             .article{
-                padding: 5px;
+                padding-bottom: 10px;
                 flex: 1 1 40%;
-                font-size: 13px;
+                font-size: 10px;
                 letter-spacing: 1px;
-                margin: 10px 10px 0 10px;
-                background: #e9e9e9;
+                background: #d8d3d3;
+                margin: 0 5px 5px 0;
+            }
+            .article p{
+                padding: 10px;
             }
             .article img{
                 width: 100%;
             }
-            .article a{
-                padding: 10px 0px;
-                margin: 10px 0;
+            .article a{ /*Leer más...*/
+                margin: 0 10px;
                 display: inline-block;
             }
             .article a:hover{
                 color: #e99592;
-                padding: 10px 0px;
-                margin: 10px 0;
                 display: inline-block;
             }
             h3{
                 color: #fff;
                 font-size: 13px;
-                padding: 10px 0;
-                margin-top: -80px;
+                padding: 10px;
+                margin-top: -30px;
             }
             h2{
-                color: #fff;
-                font-size: 25px;
-                text-transform: uppercase;
-                padding: 0 0 10px 0;
+                margin: -10px 0 0px 0;
+                padding-left: 10px;
+                background: #a52a2a;
+                color: #d7d7d7;
+                font-size: 10px;
             }
             .navegacion{
                 background: #a52a2a;
                 flex: 1 1 100%;
-                margin: 10px 10px 0 10px;
+                margin: 10px 5px 5px 0;
             }
-            .navegacion a{
+            .navegacion p{
                 color: #fff;
                 font-size: 11px;
-                padding: 0 10px;
+                text-align: center;
                 letter-spacing: 2px;
-            }
-            .navegacion a:hover{
-                color:#e99592;
             }
         .aside{
             background: #e9e9e9;
-            flex-flow: column nowrap;
-            flex: 1 1 auto;
-            margin: 10px 5px 10px 0;
-        }
-        .aside img{
-            width: 100%;
+            flex: 1 1 25%;
+            margin: 0px 5px 10px 0;
+            display: flex; 
+            flex-flow: column nowrap;   
         }
             .publicidad{
+                color: #fff;
+                background: #8b524a;
+                font-size: 9px;
                 padding: 5px;
+                margin: 0 0 5px 5px;
+            }
+            .aside .publicidad p{
+                text-align: center;
             }
     .footer{
         display: flex;
@@ -168,6 +166,7 @@ a{
             text-align: center;
         }
 
+        
 @media all and (max-width: 800px){
     .section{
             flex-direction: column;
@@ -176,24 +175,24 @@ a{
     display: flex;
     justify-content: center;
 }
+.article{
+    margin: 5px;
+}
+.navegacion{
+    margin: 5px;
+}
 }
 
 @media all and (max-width: 600px){
-
-En el ejercicio no cambia nada en esta versión, 
-pero yo creo que los artículos deberian estar en columnas.
-.articulos{
-    flex-direction: column;
-}
 .texto-principal h1{
     font-size: 15px;
 }
-}
-@media all and (max-width: 400px){
 
-    /*En el ejercicio no cambia nada en esta versión, 
-    pero yo creo que los artículos deberian estar en columnas.*/
-    
+.articulos{
+    flex-direction: column;
+}
+}
+@media all and (max-width: 400px){    
     .articulos{
         flex-direction: column;
     }
