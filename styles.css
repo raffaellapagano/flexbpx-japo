@@ -22,20 +22,20 @@ a{
         grid-gap: 5px;
     }
         .menu{
-            display: flex;
-            flex-flow: row nowrap;
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
             height: 60px;
             align-items: center;
         }
             .logo{
-                flex: 1 1 auto;
+                display: flex;
+                justify-content: center;
             }
             .logo img{
-                flex: 1 1 auto;
                 height: 50px;
             }
             .nav{
-                flex: 5 1 auto;
+                grid-template-columns: repeat(autofill, min-content);
             }
                 .nav a{
                     font-size: 14px;
@@ -46,7 +46,6 @@ a{
                     color: #e99592;
                 }
             .social{
-                flex: 1 1 auto;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-around;
