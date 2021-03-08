@@ -46,8 +46,8 @@ a{
                     color: #e99592;
                 }
             .social{
-                display: flex;
-                flex-flow: row nowrap;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
                 justify-content: space-around;
                 height: 100%;
                 align-items:center;
@@ -85,17 +85,15 @@ a{
         margin: 10px 30px;
         padding: 5px;
         background: #e6e6e6;
-        display: flex;
-        flex-flow: row nowrap;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
     }
         .articulos{
-            flex: 1 1 75%; 
-            display: flex;
-            flex-flow: row wrap;
+            display: grid;
+            grid-template-columns: repeat (2, 1fr);
         }
             .article{
                 padding-bottom: 10px;
-                flex: 1 1 40%;
                 font-size: 10px;
                 letter-spacing: 1px;
                 background: #d8d3d3;
@@ -130,8 +128,8 @@ a{
             }
             .navegacion{
                 background: #a52a2a;
-                flex: 1 1 100%;
                 margin: 10px 5px 5px 0;
+                grid-column: span 2;
             }
             .navegacion p{
                 color: #fff;
@@ -141,7 +139,6 @@ a{
             }
         .aside{
             background: #e9e9e9;
-            flex: 1 1 25%;
             margin: 0px 5px 10px 0;
             display: flex; 
             flex-flow: column nowrap;   
