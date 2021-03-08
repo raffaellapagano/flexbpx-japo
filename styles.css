@@ -17,9 +17,9 @@ a{
 }    
     .header{
         margin: 0 20px;
-        display: flex;
-        flex-flow: column nowrap;
-        height: 250px;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-gap: 5px;
     }
         .menu{
             display: flex;
