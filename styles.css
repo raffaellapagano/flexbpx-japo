@@ -90,7 +90,7 @@ a{
         flex-flow: row nowrap;
     }
         .articulos{
-            flex: 1 1 66%; 
+            flex: 1 1 66.666%; 
             display: flex;
             flex-flow: row wrap;
         }
@@ -114,8 +114,6 @@ a{
             }
             .article a:hover{
                 color: #e99592;
-                padding: 10px 0px;
-                margin: 10px 0;
                 display: inline-block;
             }
             h3{
@@ -144,7 +142,7 @@ a{
             }
         .aside{
             background: #e9e9e9;
-            flex: 1 1 33%;
+            flex: 1 1 33.333%;
             margin: 0px 5px 10px 0;
             display: flex; 
             flex-flow: column nowrap;   
@@ -168,7 +166,7 @@ a{
             text-align: center;
         }
 
-        /*
+        
 @media all and (max-width: 800px){
     .section{
             flex-direction: column;
@@ -177,17 +175,21 @@ a{
     display: flex;
     justify-content: center;
 }
+.article{
+    margin: 5px;
+}
+.navegacion{
+    margin: 5px;
+}
 }
 
 @media all and (max-width: 600px){
-
-En el ejercicio no cambia nada en esta versión, 
-pero yo creo que los artículos deberian estar en columnas.
-.articulos{
-    flex-direction: column;
-}
 .texto-principal h1{
     font-size: 15px;
+}
+
+.articulos{
+    flex-direction: column;
 }
 }
 @media all and (max-width: 400px){    
@@ -226,4 +228,3 @@ pero yo creo que los artículos deberian estar en columnas.
         font-size: 12px;
     }
     }
-    */
