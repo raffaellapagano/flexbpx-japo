@@ -12,8 +12,8 @@ a{
     text-decoration: none;
 }
 .padre{
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }    
     .header{
         margin: 0 20px;
