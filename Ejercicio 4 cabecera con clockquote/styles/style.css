@@ -22,7 +22,7 @@ a{
     .header{
         margin: 0 50px;
         padding: 0 30px;
-        background: url(imagenes/cabecera.jpg);
+        background: url(../images/cabecera.jpg);
         background-position: center;
         background-attachment: content;
         background-size: cover;

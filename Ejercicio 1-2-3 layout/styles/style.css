@@ -1,0 +1,112 @@
+/*EJERCICIO 1*/
+
+* {
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;  /*para que las cajas no desborden una con otros*/
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.cointener{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+    .header{
+        background: #000;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            background: #2d4059;
+            display: flex;
+            flex-flow: row nowrap;
+            flex-basis: auto;
+            align-items: center;
+        }
+            .logo{
+                background: #ea5455;
+                flex: 1 1 auto;
+            }
+            .nav{
+                background: #ea5455;
+                flex: 5 1 auto;
+            }
+            .social{
+                background: #ea5455;
+                flex: 1 1 auto;
+            }
+        .texto-principal{
+            background: #f07b3f;
+        }    
+            h1{
+                background: #ffd460;
+            }
+    .section{
+        background: #000;
+        display: flex;
+    }
+        .articulos{
+            background: #4e4e6a;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article{
+                background: #1f6cb0;
+                flex: 1 1 40%;
+            }
+            .navegacion{
+                background: #70a3c4;
+                flex: 1 1 100%;
+            }
+        .aside{
+            background: #f73f52;
+            flex: 1 1 auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+        }
+            .publicidad{
+                display: flex;
+                background: #ffeab5;
+            }
+    .footer{
+        background: #000;
+        display: flex;
+        justify-content: center;
+    }
+        .pie{
+            background: #e6af2e;
+            flex-basis: 100%;
+        }
+
+/*EJERCICIO 2*/
+
+@media all and (max-width: 800px){
+.section{
+        flex-direction: column;
+    }
+
+.aside{
+    display: flex;
+    justify-content: center;
+}
+}
+
+/*EJERCICIO 3*/
+
+@media all and (max-width: 600px){
+
+/*En el ejercicio no cambia nada en esta versión, 
+pero yo creo que los artículos deberian estar en columnas.*/
+.articulos{
+    flex-direction: column;
+}
+}
+
