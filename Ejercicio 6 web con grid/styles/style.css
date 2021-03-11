@@ -3,6 +3,9 @@
     padding: 0px;
     box-sizing: border-box;  /*para que las cajas no desborden una con otrs*/
 }
+html, body {
+    height: 100vh;
+}
 body{
     background: #ffffe0;
     font-family: 'Montserrat', sans-serif;
@@ -64,7 +67,7 @@ a{
                     color: #e99592;
                 }
         .texto-principal{
-            background: url(imagenes/cabecera1800px.jpg);
+            background: url(../imagenes/cabecera1800px.jpg);
             background-position:center;
             background-repeat: no-repeat;
             background-attachment: content;
