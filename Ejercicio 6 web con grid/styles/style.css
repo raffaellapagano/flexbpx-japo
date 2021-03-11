@@ -1,0 +1,247 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;  /*para que las cajas no desborden una con otrs*/
+}
+html, body {
+    height: 100vh;
+}
+body{
+    background: #ffffe0;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    color: #696969;
+    text-decoration: none;
+}
+.padre{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}    
+    .header{
+        margin: 0 20px;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-gap: 5px;
+    }
+        .menu{
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+            height: 60px;
+            align-items: center;
+        }
+            .logo{
+                display: flex;
+                justify-content: center;
+            }
+            .logo img{
+                height: 50px;
+            }
+            .nav{
+                grid-template-columns: repeat(autofill, min-content);
+            }
+            .nav-mobil{
+                display: none;
+            }
+                .nav a{
+                    font-size: 14px;
+                    padding: 0 10px;
+                    letter-spacing: 2px;
+                }
+                .nav a:hover{
+                    color: #e99592;
+                }
+            .social{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: space-around;
+                height: 100%;
+                align-items:center;
+                padding: 0 15px 15px 0;
+            }
+                .social a{
+                    font-size: 12px;
+                    padding-left: 30px;
+                }
+                .social a :hover{
+                    color: #e99592;
+                }
+        .texto-principal{
+            background: url(../imagenes/cabecera1800px.jpg);
+            background-position:center;
+            background-repeat: no-repeat;
+            background-attachment: content;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 330px;
+        }    
+            h1{
+                color: #e99592;
+                opacity: 80%;
+                background: rgab(0,0,0,.1);
+                font-family: 'Montserrat', serif;
+                font-size:18px;
+                font-weight: 300px;
+                text-align: center;
+                line-height: 1; /*espacio entrelinea*/           
+            }
+    .section{
+        margin: 10px 30px;
+        padding: 5px;
+        background: #e6e6e6;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+        .articulos{
+            display: grid;
+            grid-template-columns: repeat (2, 1fr);
+        }
+            .article{
+                padding-bottom: 10px;
+                font-size: 10px;
+                letter-spacing: 1px;
+                background: #d8d3d3;
+                margin: 0 5px 5px 0;
+            }
+            .article p{
+                padding: 10px;
+            }
+            .article img{
+                width: 100%;
+            }
+            .article a{ /*Leer más...*/
+                margin: 0 10px;
+                display: inline-block;
+            }
+            .article a:hover{
+                color: #e99592;
+                display: inline-block;
+            }
+            h3{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px;
+                margin-top: -30px;
+            }
+            h2{
+                margin: -10px 0 0px 0;
+                padding-left: 10px;
+                background: #a52a2a;
+                color: #d7d7d7;
+                font-size: 10px;
+            }
+            .navegacion{
+                background: #a52a2a;
+                margin: 10px 5px 5px 0;
+                grid-column: span 2;
+            }
+            .navegacion p{
+                color: #fff;
+                font-size: 11px;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+        .aside{
+            background: #e9e9e9;
+            margin: 0px 5px 10px 0;
+        }
+            .publicidad{
+                color: #fff;
+                background: #8b524a;
+                font-size: 9px;
+                padding: 5px;
+                margin: 0 0 5px 5px;
+            }
+            .aside .publicidad p{
+                text-align: center;
+            }
+    .footer{
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+        .pie{
+            font-size: 9px;
+            text-align: center;
+        }
+
+        
+@media all and (max-width: 800px){
+.section{
+        grid-template-columns: 1fr;
+        }
+.aside{
+    display: flex;
+    justify-content: center;
+}
+.article{
+    margin: 5px;
+}
+.navegacion{
+    margin: 5px;
+}
+}
+
+@media all and (max-width: 600px){
+.texto-principal h1{
+    font-size: 15px;
+}
+
+}
+@media all and (max-width: 400px){    
+    .header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: flex-start;
+        height: 310px;
+    }
+    .menu{
+        grid-template-columns: 1fr;
+    }
+    .nav{
+        display: none;
+    }
+    .nav-mobil{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+        .nav-mobil a{
+            font-size: 14px;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
+        .nav-mobil a:hover{
+            color: #e99592;
+        }
+    
+    .social{
+        display: flex;
+        justify-content: space-around;
+    }
+    .social a{
+        font-size: 12px;
+        color: #ee7159;
+    }
+    .nav a{
+        font-size: 10px;
+        padding: 0 10px;
+    }
+    .texto-principal h1{
+        font-size: 12px;
+    }  grid-template-columns: 1fr;
+
+    .articulos{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+    .navegacion{
+        grid-column: span 1;
+    }
+    .pie{
+        font-size: 8px;
+    }
+    }
