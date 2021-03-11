@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;  /*para que las cajas no desborden una con otrs*/
+    box-sizing: border-box;  /*para que las cajas no desborden una con otras*/
 }
 html, body {
     height: 100vh;
@@ -14,34 +14,33 @@ a{
     color: #696969;
     text-decoration: none;
 }
-.padre{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+.cointener{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
 }    
     .header{
         margin: 0 20px;
-        display: grid;
-        grid-template-rows: 1fr auto;
-        grid-gap: 5px;
+        display: flex;
+        flex-flow: column nowrap;
     }
         .menu{
-            display: grid;
-            grid-template-columns: 1fr 5fr 1fr;
+            display: flex;
+            flex-flow: row nowrap;
             height: 60px;
             align-items: center;
         }
             .logo{
+                flex: 1 1 auto;
                 display: flex;
                 justify-content: center;
             }
             .logo img{
+                flex: 1 1 auto;
                 height: 50px;
             }
             .nav{
-                grid-template-columns: repeat(autofill, min-content);
-            }
-            .nav-mobil{
-                display: none;
+                flex: 5 1 auto;
             }
                 .nav a{
                     font-size: 14px;
@@ -52,8 +51,9 @@ a{
                     color: #e99592;
                 }
             .social{
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                flex: 1 1 auto;
+                display: flex;
+                flex-flow: row nowrap;
                 justify-content: space-around;
                 height: 100%;
                 align-items:center;
@@ -67,8 +67,8 @@ a{
                     color: #e99592;
                 }
         .texto-principal{
-            background: url(../imagenes/cabecera1800px.jpg);
-            background-position:center;
+            background: url(../images/cabecera1800px.jpg);
+            background-position:50% 50%;
             background-repeat: no-repeat;
             background-attachment: content;
             background-size: cover;
@@ -91,15 +91,17 @@ a{
         margin: 10px 30px;
         padding: 5px;
         background: #e6e6e6;
-        display: grid;
-        grid-template-columns: 3fr 1fr;
+        display: flex;
+        flex-flow: row nowrap;
     }
         .articulos{
-            display: grid;
-            grid-template-columns: repeat (2, 1fr);
+            flex: 1 1 75%; 
+            display: flex;
+            flex-flow: row wrap;
         }
             .article{
                 padding-bottom: 10px;
+                flex: 1 1 40%;
                 font-size: 10px;
                 letter-spacing: 1px;
                 background: #d8d3d3;
@@ -134,8 +136,8 @@ a{
             }
             .navegacion{
                 background: #a52a2a;
+                flex: 1 1 100%;
                 margin: 10px 5px 5px 0;
-                grid-column: span 2;
             }
             .navegacion p{
                 color: #fff;
@@ -145,7 +147,10 @@ a{
             }
         .aside{
             background: #e9e9e9;
+            flex: 1 1 25%;
             margin: 0px 5px 10px 0;
+            display: flex; 
+            flex-flow: column nowrap;   
         }
             .publicidad{
                 color: #fff;
@@ -163,14 +168,13 @@ a{
         margin: 20px 0;
     }
         .pie{
-            font-size: 9px;
             text-align: center;
         }
 
         
 @media all and (max-width: 800px){
-.section{
-        grid-template-columns: 1fr;
+    .section{
+            flex-direction: column;
         }
 .aside{
     display: flex;
@@ -189,37 +193,34 @@ a{
     font-size: 15px;
 }
 
+.articulos{
+    flex-direction: column;
+}
 }
 @media all and (max-width: 400px){    
+    .articulos{
+        flex-direction: column;
+    }
     .header{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        display: flex;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: flex-start;
-        height: 310px;
+        height: 100%;
     }
-    .menu{
-        grid-template-columns: 1fr;
-    }
-    .nav{
-        display: none;
-    }
-    .nav-mobil{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
-        .nav-mobil a{
-            font-size: 14px;
-            padding: 0 10px;
-            letter-spacing: 2px;
-        }
-        .nav-mobil a:hover{
-            color: #e99592;
-        }
     
-    .social{
+    .nav{
         display: flex;
+        margin: 0;
+        padding: 0px;
+        flex-flow: column nowrap;  
+        height: auto;
+        flex: 1 1 100%;    
+        align-items: flex-start;
+    }
+    .social{
+        flex-flow: row nowrap;
+        flex: 1 1 100%;
         justify-content: space-around;
     }
     .social a{
@@ -230,18 +231,14 @@ a{
         font-size: 10px;
         padding: 0 10px;
     }
+    .texto-principal{
+        display: flex;
+        padding: 50px 0;
+        width: 100%;
+        height: 100%;
+    }
     .texto-principal h1{
+        flex: 1 1 100%;
         font-size: 12px;
-    }  grid-template-columns: 1fr;
-
-    .articulos{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
-    }
-    .navegacion{
-        grid-column: span 1;
-    }
-    .pie{
-        font-size: 8px;
     }
     }

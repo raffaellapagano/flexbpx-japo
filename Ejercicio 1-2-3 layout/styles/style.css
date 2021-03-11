@@ -1,8 +1,8 @@
 /*EJERCICIO 1*/
 
 * {
-    margin: 5px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
     box-sizing: border-box;  /*para que las cajas no desborden una con otros*/
 }
 html, body {
